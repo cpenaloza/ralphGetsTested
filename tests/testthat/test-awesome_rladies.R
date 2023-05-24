@@ -1,5 +1,5 @@
 test_that("assess awesome rladies", {
-  # writing a single message
+  # writing one message
   expected_1 <- write_rladies(1)
   expected_2 <- write_rladies(2)
   expect_type(expected_1, "character")
@@ -8,9 +8,8 @@ test_that("assess awesome rladies", {
   # writing multiple messages
   expect_multiple <- compose_rladies(1:2)
   expect_length(expect_multiple, 2)
-  # catch errors
+  # Catch errors
   expect_error(compose_rladies("a"))
   expect_error(compose_rladies("-1"))
   expect_error(compose_rladies("one"))
-
 })

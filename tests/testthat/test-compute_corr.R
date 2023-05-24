@@ -6,4 +6,5 @@ test_that("assess_compute_corr", {
   expect_equal(expected[["correlation"]], 0.901, tolerance = 0.001)
   # catching errors
   expect_error(compute_corr(data = faithful, var1 = erruptions, var2 = waiting))
+  expect_error(compute_corr(data = faithful, var1 = eruptions, var2 = waiiting))
 })
